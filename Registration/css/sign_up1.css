@@ -1,0 +1,154 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Ensure padding and borders are included in element's total width and height */
+}
+
+body {
+    padding: 50px;
+    background-image: url(../pic/logo-removebg-preview.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    background-attachment: fixed;
+    background-color: #88888850;
+    font-family: Arial, sans-serif; /* Default font for the body */
+    justify-content: center;
+    align-items: center;
+}
+
+header p {
+    text-shadow: 10px 6px 10px #3d392955;
+    justify-content: center;
+    text-align: center;
+    font-size: 40px;
+    font-family: 'Times New Roman', serif; /* Font for paragraph text */
+}
+
+.top {
+    text-align: start;
+    text-decoration: none;
+    font-size: x-large;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+p {
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    text-decoration: underline;
+}
+
+div p {
+    text-decoration: underline;
+    font-size: 5vh;
+}
+
+.container {
+    border: 1px solid rgb(25, 0, 255);
+    margin: 10px;
+    border-radius: 25px;
+    box-shadow: 5px 10px 8px 10px rgba(25, 0, 255, 0.323);
+    background-color: #edeade55;
+    padding: 20px; /* Adjust as needed */
+    font-family: 'Georgia', serif; /* Font for text inside the container */
+}
+
+h3 {
+    color: black;
+    font-family: 'Helvetica Neue', sans-serif; /* Font for h3 elements */
+}
+
+.group1, .group-1 {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1px; /* Adjust as needed */
+    justify-content: center;
+}
+
+.group-1 {
+    margin-top: 20px;
+    margin-left: 0;
+    margin-right: 0;
+    gap: 30%; /* Gap between items in group-1 */
+}
+
+.group-box {
+    margin-top: 25px;
+    padding: 0px;
+}
+
+.text-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 10px;
+    padding: 0;
+    position: relative; /* Ensure proper positioning for password toggle icon */
+}
+
+.box {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center; /* Center buttons horizontally */
+    gap: 10px; /* Adds space between buttons */
+}
+
+.button {
+    background-color: #4b2b8b;
+    color: white;
+    border: none;
+    padding: 5px 10px; /* Adjusted padding for better appearance */
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 10px; /* Adjust font size */
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Verdana', sans-serif; /* Font for buttons */
+}
+
+.button:hover {
+    background-color: #3b1f6e;
+}
+
+.buts {
+    margin-top: 10%;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    color: #000;
+}
+
+.but {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.but:hover {
+    background-color: #2b2c58;
+    color: wheat;
+}
+
+/* Additional Styles for Password Visibility Toggle */
+.show-password {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 16px; /* Increased font size for a larger icon */
+    width: 16px; /* Set width to match font size */
+    height: 16px; /* Set height to match font size */
+    text-align: center; /* Center the icon */
+    line-height: 1; /* Adjust line height */
+    padding: 0; /* Remove any default padding */
+}
+
+.error {
+    color: red;
+    margin-top: 5px;
+}

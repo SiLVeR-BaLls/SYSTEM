@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Library Registration</title>
+    <link rel="stylesheet" href="css/sign_up1.css">
+    <script src="js/script.js" defer></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+</head>
+
+<body>
+    <header>
+        <p><strong>DIGITAL LIBRARY MANAGEMENT SYSTEM</strong></p>
+        <br>
+        <br>
+    </header>
+    <main>
+        <form id="registration-form" action="php/connection.php" method="post" class="container">
+            <p class="top"><b>User Information</b></p>
+            <div class="group1">
+                <div class="text-group">
+                    <label for="Fname">Firstname</label>
+                    <input id="Fname" name="Fname" class="box" type="text" placeholder="Firstname" required>
+                </div>
+                <div class="text-group">
+                    <label for="Sname">Surename</label>
+                    <input id="Sname" name="Sname" class="box" type="text" placeholder="Surename" required>
+                </div>
+                <div class="text-group">
+                    <label for="Mname">Middle</label>
+                    <input id="Mname" name="Mname" class="box" type="text" placeholder="Middle Name" required>
+                </div>
+                <div class="text-group">
+                    <div class="text-group">
+                        <label for="Ename">Gender</label>
+                        <select name="Ename" id="Ename" required>
+                            <option value="" disabled selected>Extension</option>
+                            <option value="n/a">N/A</option>
+                            <option value="jr">JR</option>
+                            <option value="sr">SR</option>
+                            <option value="iii">III</option>
+                            <option value="iv">IV</option>
+                            <option value="v">V</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="group-1">
+                <div class="group-box">
+                    <p>Basic</p>
+                    <div class="text-group">
+                        <label for="gender">Gender</label>
+                        <select name="gender" id="gender" required>
+                            <option value="" disabled selected>Select Gender</option>
+                            <option value="m">Male</option>
+                            <option value="f">Female</option>
+                            <option value="o">Other</option>
+                        </select>
+                    </div>
+                    <div class="text-group">
+                        <label for="DOB">Birthdate</label>
+                        <input id="DOB" name="DOB" class="box" type="date" placeholder="Enter Birthdate" required>
+                    </div>
+                    <div class="text-group">
+                        <label for="GRAD_LVL">Grade Level</label>
+                        <select name="GRAD_LVL" id="GRAD_LVL" required>
+                            <option value="1">Primary</option>
+                            <option value="2">Secondary</option>
+                            <option value="3">Junior High School</option>
+                            <option value="4">Senior High School</option>
+                            <option value="5,">Freshman</option>
+                            <option value="6">Sophomore</option>
+                            <option value="7">Junior</option>
+                            <option value="8">Senior</option>
+                            <option value="9">Graduated</option>
+                        </select>
+                    </div>
+                    <div class="text-group">
+                        <label for="GRAD_YR">Graduation Year</label>
+                        <input id="GRAD_YR" name="GRAD_YR" class="box" type="text"
+                            placeholder="Expected Graduation yrLVL">
+                    </div>
+                </div>
+
+                <div class="group-box">
+                    <p>Address</p>
+                    <div class="text-group">
+                        <label for="municipality">Municipality</label>
+                        <input id="municipality" name="municipality" class="box" type="text"
+                            placeholder="Enter Municipality" required>
+                    </div>
+                    <div class="text-group">
+                        <label for="city">City</label>
+                        <input id="city" name="city" class="box" type="text" placeholder="Enter City" required>
+                    </div>
+                    <div class="text-group">
+                        <label for="barangay">Barangay</label>
+                        <input id="barangay" name="barangay" class="box" type="text" placeholder="Enter Barangay"
+                            required>
+                    </div>
+                    <div class="text-group">
+                        <label for="province">Province</label>
+                        <input id="province" name="province" class="box" type="text" placeholder="Enter Province"
+                            required>
+                    </div>
+                </div>
+
+                <div class="group-box">
+                    <p>Contact</p>
+                    <div class="text-group">
+                        <label for="con1">Contact No.1</label>
+                        <input id="con1" name="con1" class="box" type="text" placeholder="09*********">
+                    </div>
+                    <div class="text-group">
+                        <label for="con2">Contact No.2</label>
+                        <input id="con2" name="con2" class="box" type="text" placeholder="09*********">
+                    </div>
+                    <div class="text-group">
+                        <label for="mail1">Email 1</label>
+                        <input id="mail1" name="mail1" class="box" type="email" placeholder="sample@gmail.com">
+                    </div>
+                    <div class="text-group">
+                        <label for="mail2">Email 2</label>
+                        <input id="mail2" name="mail2" class="box" type="email" placeholder="sample@gmail.com">
+                    </div>
+                </div>
+
+
+                <div id="password-form">
+                    <div class="group-box">
+                        <p>Account</p>
+                        <div class="text-group">
+                            <label for="username">Username</label>
+                            <input id="username" name="username" class="box" type="text" placeholder="Enter Username"
+                                required>
+                        </div>
+                        <div class="text-group">
+                            <label for="password">Password</label>
+                            <div class="pass">
+                                <input id="password" name="password" class="box" type="password"
+                                    placeholder="Enter Password" required>
+                                <span id="password-toggle" class="show-password"
+                                    onclick="togglePasswordVisibility('password', 'password-toggle')">📚</span>
+                            </div>
+                        </div>
+                        <div class="text-group">
+                            <label for="password-repeat">Repeat Password</label>
+                            <div class="pass">
+                                <input id="password-repeat" name="password-repeat" class="box" type="password"
+                                    placeholder="Repeat Password" required>
+                                <span id="password-repeat-toggle" class="show-password"
+                                    onclick="togglePasswordVisibility('password-repeat', 'password-repeat-toggle')">📚</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <br>
+            <hr>
+            <br>
+
+            <p class="top"><b>Site Information</b></p>
+
+            <div class="group-1">
+                <div class="group-box">
+                    <label class="IDno">
+                        <input type="radio" name="option" value="custom" id="custom">
+                        ID No.<br>
+                        <input id="IDno" name="IDno" class="box" type="text" placeholder="ID No" required>
+                    </label>
+                    <br>
+                    <br>
+
+                    <div class="text-group">
+                        <label for="U_type">User Type</label>
+                        <select name="U_type" id="U_type" required>
+                            <option value="" selected disabled>Select User Type</option>
+                            <option value="student">Student</option>
+                            <option value="professor">Professor</option>
+                            <option value="staff">Staff</option>
+                            <option value="visitor">Visitor</option>
+                        </select>
+                    </div>
+
+
+                    <div class="text-group">
+                        <label for="A_LVL">Access Level</label>
+                        <select id="A_LVL" name="A_LVL">
+                            <option value="" disabled selected>Select Academic Level</option>
+                            <option value="1">Level 1</option>
+                            <option value="2">Level 2</option>
+                            <option value="3">Level 3</option>
+                            <option value="4">Level 4</option>
+                        </select>
+                    </div>
+
+
+
+                    <div class="text-group">
+                        <label for="status">Status</label>
+                        <select name="status" id="status" required>
+                            <option value="" selected disabled>Select Status</option>
+                            <option value="active">Active</option>
+                            <option value="inactive">Inactive</option>
+                            <option value="restricted">Restricted</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="group-box">
+
+                    <div class="text-group">
+                        <label for="college">College</label>
+                        <select id="college" name="college" required>
+                            <option value="" selected disabled>Select College</option>
+                            <option value="cas">College of Arts and Sciences</option>
+                            <option value="cea">College of Engineering and Architecture</option>
+                            <option value="coe">College of Education</option>
+                            <option value="cit">College of Industrial Technology</option>
+                        </select>
+                    </div>
+
+                    <div class="text-group">
+                        <label for="course">Course</label>
+                        <select id="course" name="course">
+                            <option value="" selected disabled>Select Course</option>
+                            <!-- Options will be dynamically added -->
+                        </select>
+                    </div>
+
+
+                    <div class="text-group">
+                        <label for="yrLVL">Year</label>
+                        <select id="yrLVL" name="yrLVL" required>
+                            <option value="" selected disabled>Select Level</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                    </div>
+                    <div class="text-group">
+                        <label for="section">Section</label>
+                        <select id="section" name="section" required>
+                            <option value="" selected disabled>Select Section</option>
+                            <option value="a">A</option>
+                            <option value="b">B</option>
+                            <option value="c">C</option>
+                            <option value="d">D</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <br>
+            <hr>
+            <br>
+            <div class="button-container">
+                <button type="submit" class="button">Register</button>
+                <button type="reset" class="button">Reset</button>
+                <div id="error-message" class="error"></div>
+            </div>
+            <p>Do you have an account? <a href="log_in.html" class="but">Log In</a></p>
+        </form>
+    </main>
+</body>
+
+</html>
