@@ -74,22 +74,24 @@ if ($conn->connect_error) {
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script>
         // Function to display SweetAlert messages
-        function showAlert(message, type) {
-            Swal.fire({
-                icon: type === 'success' ? 'success' : 'error',
-                title: type === 'success' ? 'Welcome!' : 'Error',
-                text: message,
-                didClose: () => {
-                    if (type === 'success') {
-                        // Redirect to profile page or home page upon successful login
-                        window.location.href = 'profile.php';
-                    } else if (type === 'error') {
-                        // Redirect back to the login page
-                        window.history.back();
-                    }
-                }
-            });
+       
+function login() {
+    const username = document.getElementById('login-username').value;
+    const password = document.getElementById('login-password').value;
+    
+    const storedUser = JSON.parse(localStorage.getItem('user'));
+    
+    if (storedUser && storedUser.username === username && storedUser.password === password) {
+        if (storedUser.role === 'admin') {
+            window.location.href = 'landing-admin.html';
+        } else {
+            window.location.href = 'landing-user.html';
         }
+    } else {
+        alert('Invalid username or password.');
+    }
+}
+
     </script>
 </head>
 

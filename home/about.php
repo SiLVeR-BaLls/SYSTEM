@@ -16,7 +16,14 @@
 
             <h2>Our Mission</h2>
             <p>We aim to empower individuals and businesses with innovative solutions.</p>
-
+            <div class="text-group">
+                    <label for="Fname">Firstname</label>
+                    <input id="Fname" name="Fname" class="box" type="text" placeholder="Firstname" required>
+                </div>
+                <div class="text-group">
+                    <label for="Sname">Surename</label>
+                    <input id="Sname" name="Sname" class="box" type="text" placeholder="Surename" required>
+                </div>
             <h2>Our Team</h2>
             <div class="team">
                 <div class="team-member">

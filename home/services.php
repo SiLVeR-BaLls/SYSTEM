@@ -17,6 +17,14 @@
                 <h2>Service One</h2>
                 <p>Description of service one.</p>
             </div>
+            <div class="text-group">
+                    <label for="Fname">Firstname</label>
+                    <input id="Fname" name="Fname" class="box" type="text" placeholder="Firstname" required>
+                </div>
+                <div class="text-group">
+                    <label for="Sname">Surename</label>
+                    <input id="Sname" name="Sname" class="box" type="text" placeholder="Surename" required>
+                </div>
             <div class="service-item">
                 <h2>Service Two</h2>
                 <p>Description of service two.</p>
